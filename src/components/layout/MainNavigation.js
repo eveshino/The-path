@@ -8,23 +8,35 @@ function MainNavigation() {
 
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>The path</div>
+      <Link to="/" className={classes.logo}>
+        The path
+      </Link>
       <nav>
         <ul>
           <li>
-            <Link to="/">Content</Link>
+            <Link to="/" className={classes.nav}>
+              Content
+            </Link>
           </li>
           <li>
-            <Link to="/new-content">Add New Content</Link>
+            <Link to="/new-content" className={classes.nav}>
+              Add New Content
+            </Link>
           </li>
           <li>
-            <Link to="/favorites">
+            <Link to="/favorites" className={classes.nav}>
               Top Contents
               <span className={classes.badge}>
                 {favoritesCtx.totalFavorites}
               </span>
             </Link>
           </li>
+          {/* <li>
+            <Link to="/profile">Profile</Link>
+          </li>
+          <li>
+            <Link to="/auth">Login</Link>
+          </li> */}
         </ul>
       </nav>
     </header>

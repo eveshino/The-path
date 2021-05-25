@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ContentList from "../components/contents/ContentList";
 
-async function AllContentsPage() {
+function AllContentsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedContent, setLoadedContent] = useState([]);
 
@@ -37,10 +37,10 @@ async function AllContentsPage() {
     );
   }
   return (
-    <section>
+    <>
       <h1>All Contents</h1>
       <ContentList contents={loadedContent} />
-    </section>
+    </>
   );
 }
 

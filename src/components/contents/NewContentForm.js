@@ -4,7 +4,7 @@ import Cart from "../ui/Card";
 import classes from "./NewContentForm.module.css";
 
 function NewContentForm(props) {
-  const titleInputRef = useRef();
+  // const titleInputRef = useRef();
   const imageInputRef = useRef();
   const addressInputRef = useRef();
   const descriptionInputRef = useRef();
@@ -12,13 +12,13 @@ function NewContentForm(props) {
   function submitHandler(event) {
     event.preventDefault();
 
-    const enteredTitle = titleInputRef.current.value;
+    // const enteredTitle = titleInputRef.current.value;
     const enteredImage = imageInputRef.current.value;
     const enteredAddress = addressInputRef.current.value;
     const enteredDescription = descriptionInputRef.current.value;
 
     const contentData = {
-      title: enteredTitle,
+      // title: enteredTitle,
       image: enteredImage,
       address: enteredAddress,
       description: enteredDescription,
@@ -28,16 +28,16 @@ function NewContentForm(props) {
   return (
     <Cart>
       <form className={classes.form} onSubmit={submitHandler}>
-        <div className={classes.control}>
+        {/* <div className={classes.control}>
           <label htmlFor="title">Content </label>
           <input type="text" required id="title" ref={titleInputRef} />
-        </div>
+        </div> */}
         <div className={classes.control}>
-          <label htmlFor="image">Image or ScreenPrint</label>
+          <label htmlFor="image">Image URL</label>
           <input type="url" id="image" ref={imageInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor="text">Content tech</label>
+          <label htmlFor="text">Title</label>
           <input type="text" id="text" ref={addressInputRef} />
         </div>
         <div className={classes.control}>

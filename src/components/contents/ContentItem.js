@@ -26,15 +26,16 @@ function ContentItem(props) {
     <li className={classes.item}>
       <Cart>
         <div className={classes.image}>
-          <img src={props.image} alt={props.title} />
+          <img className={classes.img} src={props.image} alt={props.title} />
         </div>
         <div className={classes.content}>
-          <h3>{props.title}</h3>
-          <address>{props.address}</address>
-          <p>{props.description}</p>
-        </div>
-        <div className={classes.actions}>
-          <button onClick={toggleFavoriteStatusHandler}>
+          <h3>{props.address}</h3>
+          <p className={classes.text}>{props.description}</p>
+          <div className={classes.actions} />
+          <button
+            className={classes.favorites}
+            onClick={toggleFavoriteStatusHandler}
+          >
             {itemIsFavorite ? "Remove from Favorites" : "To Favorites"}
           </button>
         </div>
