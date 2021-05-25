@@ -1,5 +1,9 @@
-1. This is a small website app that i made
-   to post all my content that i learned and all content
-   that most experient guys taught me to improve my developer career
+The Path
+This is a small project that i made
+to post all content that I'm learning
+it's my study path
 
-2. from now on ,I'll try to put user auth system in my app.
+next thing that I'll work on is to implement the delete method to the
+content card .
+
+![](images/Mainpage.jpeg)
